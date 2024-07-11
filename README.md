@@ -2,21 +2,34 @@
 This repository is about project of computational neuroscience 
 
 ## 1.Problem statement
-  explain your goal of project
+  هدف پروژه بررسی یکی از کنال هایی است که توسط الکترود از ناحیه ی هیپوکمپ موش ثبت شده و کلاسترینگ نورون های موجود است .به عبارتی پروژه spike sorting است
 
 ## 2.Related works
-  explores existing research and solutions related to your project
+برای این دیتایی که ثبت شده است با استفاده از پکیح spikeinterface هم کلاسترینگ صورت گرفته است https://doi.org/10.7554/eLife.61834
+ 
+Version of Record
+November 30, 2020
+Download
+CiteShare
+Comment
+14,692 views 1,408 downloads 144 citations
+Of interest
+Multi-day neuron tracking in high-density electrophysiology recordings using earth mover’s distance
+Augustine Xiaoran Yuan, Jennifer Colonell ... Timothy D Harris
+Tools and Resources  Jul 10, 2024
+Further reading
+
 
 ## 3.Proposed Method
-
+در این پروژه از پکیج Mcspy استفاده شده است و روش برای کلاسترینگ gmm وبرای استخراج ویژگی هم pca صورت گرفته است
 
 ## 4.Implementation
 
 ### 4.1. Dataset
-Under this subsection, you'll find information about the dataset used for your project. It includes details about the dataset source,task, channels, and number of trials. 
+دیتا ست بدست امده مربوط به ناحیه ی هیپوکمپ موش است که به ثبت الکتروفیزیولوژی خارج سلولی ارتباط دارد و توسط 24 کانال به دست آمده است.که این 24 well مربوط به یک Multi-electrode-array است .که در این پروژه تنها دیتای مربوط به 12 کانال مربوط به یک wall صورت گرفته است.دراین دیتاست 6 قسمت قرار گرفته است که به داده های انالوگی(پیوسته) و گسسته (event) تقسیم میشود.اولین داده ی انالوگی مربوط به الکترود است که شامل داده های نورونی ثبت شده توسط الکترود میباشد.و شامل فعالیت های نورونی است.داده ی دوم مربوط به اطلاعات کانال است که الزاما مربوط به داده های نورونی نیست.و داده ی انالوگی سوم شامل سیگنال های کنترلی است .داده ی چهارم مربوط به event هااست و شامل زمان اعمال محرک است.داده ی پنجم مربوط به زمان بندی فاز های مختلف است منظور از فاز های مختلف شرایط ازمایشی مختلف میباشد . و داده ی ششم هم به مانند داده ی پنجم و با تفاوتات اندک میباشد.در این پروژه تنها از داده ی اول استفاده میکنیم چرا که اطلاعات نورونی را شامل میشود.داده های مربوط به event برای زمانی که میخواهیم شرایط ازمایش را تحت تاثیر یک مورد جدید قرار دهیم (مثل تزریق دارو) مناسب است.و اطلاعات زمانی مورد نطر را به ما میدهد.بنابراین دیتای ما به صورتی است که بتوانیم تحت شرایط آزمایشی مختلف بررسی هایی را صورت دهیم 
 
 ### 4.2. Model
-In this subsection, explain your model that you're goning to fit your dataset
+در این پروژه از مدل گوسین استفاده شده است
 
 ### 4.3. Evaluate
-In the evaluation section, the methods and metrics used to assess the model's performance are detailed
+برای معیار ارزیابی هم از روشsilhouettes استفاده کردیم
